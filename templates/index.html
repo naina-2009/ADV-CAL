@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+
+    body {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 25px;
+        background-color: darkslategrey;
+    }
+
+    h1 {
+        color: skyblue;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    label
+    {
+        font-size: 35px;
+        color: white;
+    }
+
+    select
+    {
+        font-size: 25px;
+        background-color:blanchedalmond;
+        font-weight: bold;
+    }
+
+    input{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    p{
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+
+</style>
+</head>
+
+<body>
+<h1>ADVANCE CALCULATOR</h1>
+<br>
+<img src="{{url_for('static', filename = 'img.png') }}" width = 450px height = 400px>
+<form method = 'POST'>
+    <label>Enter Expression</label>
+    <br>
+    <select class = 'is-focused is-large' name = 'operation' aria-label = 'operationDropdown'>
+        <option>Choose Option</option>
+        <option value = "simplify">Simplify</option>
+        <option value = "factor">Factor</option>
+    </select>
+    <input placeholder = "Expression" name = "text">
+    <input type = "submit">
+</form>
+<p>Your Equation is {{equation}} = {{result}}.</p>
+</body>
+</html>
